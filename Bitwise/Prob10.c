@@ -12,21 +12,23 @@ Bitwise - Problem 10
 uint16 max_zero(uint16 num)
 {
 	
-	sint8 max = -1;
+	uint16 max = 0;
 	uint16 count = 0;
+	uint16 flag = 0;
 
-	while (num) {
-		if (!(num & 1)) {
-			count++;
-			num >>= 1;
-			max = MAX(max, count);
-		}
-		else {
-
+	while (num!=0) {
+		if (num & 1 == 1) {
 			max = MAX(max, count);
 			count = 0;
-			num >>= 1;
+			flag=1;
 		}
+		else if (flag==1) {
+
+			max = MAX(max, count);
+			count ++;
+			
+		}
+	num =num >> 1;
 	}
 	return max;
 }
