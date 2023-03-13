@@ -135,7 +135,7 @@ void play(){
 	}	
 		  // no one won the game
     if (result==0 && play_count == 9){
-        printf("\n\t *** Draw...  ***\n");
+        printf("\n\n\t      *** Draw...  ***\n");
 		}
 	
 		printf("\n\t      --- Game Over --- \n");
